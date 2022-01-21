@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>APP NAME: A JS PROJECT</title>
+    <title>Loan Shark: A JS PROJECT</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +25,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="img/MspectreMark.svg" height="24" class="d-inline-block align-text-top">
-                APP NAME</a>
+                Loan Shark</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,14 +48,28 @@
             </div>
         </div>
     </nav>
-
+    <!--=======MAIN SECTION========-->
     <main class="flex-shrink-0">
         <div class="container mt-5">
-            <div>
-                <h1>APP UI WILL GO HERE</h1>
-                <input id="message" name="mesage" placeholder="Enter A Message">
-                <div class="p-2">
-                    <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+            <div class="row">
+                <div class="col">
+                    <form action="/action_page.php">
+                        <div> <label for="lamount">Loan Amount</label></div>
+                        <div><input type="text" id="lamount" name="lamount" value=""></div>
+                        <div><label for="payments">Payments</label></div>
+                        <div><input type="text" id="payments" name="payments" value=""></div>
+                        <div><label for="rate">Rate</label></div>
+                        <div><input type="text" id="rate" name="rate" value=""></div>
+                        <div><input type="submit" value="Submit"></div>
+                    </form>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
                 </div>
             </div>
         </div>
