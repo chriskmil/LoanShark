@@ -53,33 +53,58 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col">
-                    <form action="/action_page.php">
-                        <div> <label for="lamount">Loan Amount</label></div>
-                        <div><input type="text" id="lamount" name="lamount" value=""></div>
-                        <div><label for="payments">Payments</label></div>
-                        <div><input type="text" id="payments" name="payments" value=""></div>
-                        <div><label for="rate">Rate</label></div>
-                        <div><input type="text" id="rate" name="rate" value=""></div>
-                        <div><input type="submit" value="Submit"></div>
-                    </form>
+                    <div class="mb-3">
+                        <h1>Loan Calculator</h1>
+                        <label for="loanAmount" class="form-label">Loan Amount:</label>
+                        <input type="loanamount" class="form-control" id="loanAmount" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Payments" class="form-label">Payments</label>
+                        <input class="form-control" id="payments"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rate" class="form-label">Rate</label>
+                        <input class="form-control" id="rate"></input>
+                    </div>
+                    <div class="d-flex justify-content-end"><input type="button" id="calculate" value="Calculate"
+                            onclick="calculate(cpsi)">
+                    </div>
                 </div>
                 <div class="col">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Total Principal</th>
+                            </tr>
+                            <tr>
+                                <th>Total Interest</th>
+                            </tr>
+                            <tr>
+                                <th>Total Cost</th>
+                            </tr>
+
+                        </thead>
+                    </table>
 
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <table>
-                        <thead class="thead-dark">
+                <div class="col-12 py-2">
+                    <table class="table table-sm table-dark">
+                        <caption>Money Table</caption>
+                        <thead>
                             <tr>
-                                <th scope="col-2">Month</th>
-                                <th scope="col-2">Payment</th>
-                                <th scope="col-2">Principle</th>
-                                <th scope="col-2">Interest</th>
-                                <th scope="col-2">Total Interest</th>
-                                <th scope="col-2">Balance</th>
+                                <th scope="col">Month</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Total Interest</th>
+                                <th scope="col">Balance</th>
                             </tr>
                         </thead>
+                        <tbody>
+
+                        </tbody>
                     </table>
                 </div>
             </div>
