@@ -14,7 +14,7 @@ main>.container {
 /*--navbar styles--*/
 
 .navbarBG {
-    background-color: var(--cm-dark-color);
+    background-color: var(--cm-primary-color);
 }
 
 
@@ -68,7 +68,7 @@ main>.container {
 
 /*--footer styles*/
 .footer {
-    background-color: var(--cm-dark-color);
+    background-color: var(--cm-primary-color);
     padding-right: 1rem;
     color: var(--cm-light-color);
 }
