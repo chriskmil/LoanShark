@@ -50,60 +50,78 @@
     </nav>
     <!--=======MAIN SECTION========-->
     <main class="flex-shrink-0">
-        <div class="container mt-5">
+        <div class="container">
+            <h1 class="mb-2">Loan Calculator</h1>
             <div class="row">
-                <div class="col">
-                    <div class="mb-3">
-                        <h1>Loan Calculator</h1>
-                        <label for="loanAmount" class="form-label">Loan Amount:</label>
-                        <input type="loanamount" class="form-control" id="loanAmount" placeholder="">
+                <div class="col loanForm">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <label for="loanamount">Loan Amount</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="loanamount" value=15000 name="loanamount">
+                        </div>
+                        <div class="col">
+                            <label for="loanterm">Payments</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="loanterm" value="60" name="loanterm">
+                        </div>
+                        <div class="col">
+                            <label for="loanrate">Rate:</label>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="loanrate" value=3 name="loanrate">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="Payments" class="form-label">Payments</label>
-                        <input class="form-control" id="payments"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="rate" class="form-label">Rate</label>
-                        <input class="form-control" id="rate"></input>
-                    </div>
-                    <div class="d-flex justify-content-end"><input type="button" id="calculate" value="Calculate"
-                            onclick="calculate(cpsi)">
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button type="button" id="btnSubmit" class="btn btn-outline-info">Calculate</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <table class="table table-borderless">
-                        <thead>
-                            <tr>
-                                <th>Total Principal</th>
-                            </tr>
-                            <tr>
-                                <th>Total Interest</th>
-                            </tr>
-                            <tr>
-                                <th>Total Cost</th>
-                            </tr>
+                <div class="col loanInfo">
+                    <div id="paymentTitle">
+                        <p>Your Monthly Payments</p>
+                    </div>
+                    <p id="payment">
 
-                        </thead>
-                    </table>
+                    </p>
+                    <div class="row row-cols-2">
+                        <div class="col">Total Principal</div>
+                        <div class="col text-right" id="totalPrincipal">
 
+                        </div>
+                        <div class="col text-left">
+                            <label>Total Interest</label><br>
+                        </div>
+                        <div class="col text-right" id="totalInterest">
+
+                        </div>
+                        <div class="col text-left">
+                            <label>Total Cost</label>
+                        </div>
+                        <div class="col text-right" id="totalCost">
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 py-2">
-                    <table class="table table-sm table-dark">
-                        <caption>Money Table</caption>
-                        <thead>
+                <div class="col">
+                    <table class="table table-info table-striped table-hover mt-5">
+                        <thead id="tableheader" class="text-black">
                             <tr>
-                                <th scope="col">Month</th>
-                                <th scope="col">Payment</th>
-                                <th scope="col">Principal</th>
-                                <th scope="col">Interest</th>
-                                <th scope="col">Total Interest</th>
-                                <th scope="col">Balance</th>
+                                <th>Month</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Total Interest</th>
+                                <th>Balance</th>
                             </tr>
                         </thead>
-                        <tbody>
-
+                        <tbody id="scheduleBody">
+                            <!---template data--->
                         </tbody>
                     </table>
                 </div>
@@ -143,6 +161,16 @@
             </div>
         </div>
     </footer>
+    <template id="schedule-Template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
@@ -152,7 +180,7 @@
     <!--CustomJavascript-->
     <script src="js/site.js"></script>
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getMessage);
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 </body>
 
