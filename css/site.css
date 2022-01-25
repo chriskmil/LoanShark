@@ -36,7 +36,7 @@ main>.container {
 }
 
 .checklisticon {
-    color: var(--cm-secondary-color);
+    color: var(--cm-primary-color);
 }
 
 .btn-outline-primary {
@@ -54,8 +54,8 @@ main>.container {
 
 .btn-primary {
     color: white !important;
-    background-color: var(--cm-secondary-color) !important;
-    border-color: var(--cm-secondary-color);
+    background-color: var(--cm-dark-color) !important;
+    border-color: var(--cm-primary-color);
 }
 
 .btn-primary:hover,
@@ -63,7 +63,7 @@ main>.container {
 .btn-primary:visited,
 .btn-primary:focus {
     filter: brightness(1.1) !important;
-    border-color: var(--cm-secondary-color);
+    border-color: var(--cm-primary-color);
 }
 
 /*--footer styles*/
